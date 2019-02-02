@@ -225,21 +225,16 @@ export default class Environment {
     if (duration) {
       this._panoFade.fadeImmediate({
         targetLevel: 0,
-        duration: duration,
-        onFadeEnd: state => {
-          if (state !== 'finished' || !this._panoLoad) {
-            return;
-          }
-          this._panoLoad.then(data => {
+        duration: (duration)
+      });
+      this._panoLoad.then(data => {
             this._setRotateTransform(rotateTransform);
             this._panoFade.fadeImmediate({
               targetLevel: fadeLevel,
-              duration: duration,
+              duration: (duration+100),
             });
             this._updateTexture(data);
           });
-        },
-      });
     }
     if (!loader) {
       return Promise.resolve();
