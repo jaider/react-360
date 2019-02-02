@@ -14,6 +14,12 @@ Next, install the React 360 CLI – a command-line tool that generates the basic
 ```
 npm install -g react-360-cli
 ```
+Or Latest changes from the master branch
+https://docs.npmjs.com/uninstalling-packages-and-dependencies
+
+```
+npm install https://github.com/jaider/react-360.git
+```
 
 Or
 
